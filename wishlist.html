@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'header.html', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                    document.getElementById('header').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+  <h1>fa</h1>
+    <!-- Rest of your content goes here -->
+</body>
+</html>
